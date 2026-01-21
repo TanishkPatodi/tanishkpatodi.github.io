@@ -6,77 +6,97 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
-  body {
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    padding: 60px 80px;
-    line-height: 1.7;
-    background-color: #040c1f;
-    color: #ffffff;
-  }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      padding: 70px 90px;
+      background-color: #040c1f;
+      color: #ffffff;
+      font-size: 18px;
+      line-height: 1.75;
+    }
 
-  h1, h2 {
-    color: #d7e6ff;
-  }
+    h1 {
+      font-size: 2.6em;
+      margin-bottom: 0.3em;
+      color: #dbe8ff;
+    }
 
-  a {
-    color: #9bbcff;
-    text-decoration: none;
-  }
+    h2 {
+      font-size: 1.6em;
+      margin-top: 2.5em;
+      margin-bottom: 0.8em;
+      color: #cfe0ff;
+    }
 
-  a:hover {
-    text-decoration: underline;
-  }
+    p {
+      max-width: 900px;
+      margin-bottom: 1.2em;
+    }
 
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 60px;
-  }
+    a {
+      color: #9bbcff;
+      text-decoration: none;
+    }
 
-  .content {
-    max-width: 900px;
-  }
+    a:hover {
+      text-decoration: underline;
+    }
 
-  .profile {
-    width: 260px;
-    height: 340px;
-    object-fit: cover;
-  }
+    /* Profile image */
+    .profile {
+      float: right;
+      width: 280px;
+      height: auto;
+      margin: 0 0 30px 50px;
+      object-fit: cover;
+    }
 
-  ul {
-    margin-left: 20px;
-  }
+    ul {
+      max-width: 900px;
+      margin-left: 20px;
+    }
 
-  .links {
-    margin-top: 80px;
-    padding-top: 25px;
-    border-top: 1px solid #1d2f55;
-    text-align: center;
-    font-size: 1em;
-  }
+    li {
+      margin-bottom: 0.6em;
+    }
 
-  .links a {
-    margin: 0 12px;
-    white-space: nowrap;
-  }
-</style>
+    /* Footer links */
+    .links {
+      clear: both;
+      margin-top: 90px;
+      padding-top: 30px;
+      border-top: 1px solid #1d2f55;
+      text-align: center;
+      font-size: 1.05em;
+    }
+
+    .links a {
+      margin: 0 14px;
+      white-space: nowrap;
+    }
+
+    /* Slightly improve readability on very large screens */
+    @media (min-width: 1600px) {
+      body {
+        padding-left: 140px;
+        padding-right: 140px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-  <div class="header">
-    <div class="content">
-      <h1>Tanishk Patodi</h1>
-      <p>
-        <strong>PhD Student, IMI Department</strong><br>
-        Indian Institute of Science (IISc)
-      </p>
-    </div>
+  <!-- Profile image (floats right, text wraps naturally) -->
+  <img src="assets/img/profile.jpg" alt="Tanishk Patodi" class="profile">
 
-    <img src="assets/img/profile.jpg" alt="Tanishk Patodi" class="profile">
-  </div>
+  <h1>Tanishk Patodi</h1>
+
+  <p>
+    <strong>PhD Student, IMI Department</strong><br>
+    Indian Institute of Science (IISc)
+  </p>
 
   <h2>About Me</h2>
 
@@ -96,7 +116,9 @@
     And of course, I'm always up for music recommendations, both lyrically or composition wise great music.
   </p>
 
+
   <h2>Research Interests</h2>
+
   <ul>
     <li>Genome-scale metabolic modeling</li>
     <li>Drug tolerance in tuberculosis</li>
